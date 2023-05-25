@@ -6,8 +6,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const db = require("./models");
-const middlewares = require("./middleware")
+const middlewares = require("./middlewares")
 let port = process.env.PORT || 4000;
 // const AppError = require("./utils/appError");
 // const errorHandler = require("./utils/errorHandler");
@@ -19,14 +18,10 @@ let port = process.env.PORT || 4000;
 middlewares(app);
 
 // =====================
-//  Sequelize DB Sync 
+//  Mongo DB Sync 
 // =====================
 
-db.sequelize.sync().then(() => {
-  console.log("DB Synced");
-}).catch((err: any) => {
-  console.log("Failed to sync db: " + err.message);
-});
+
 
 // =====================
 //  Initialize & Use Routes

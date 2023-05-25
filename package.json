@@ -4,19 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js": "npx tsc --watch",
+    "start": "node dist/index",
+    "dev": "npx nodemon ./index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.31.0"
   },
@@ -32,9 +36,8 @@
     "@types/morgan": "^1.9.4",
     "@types/node": "^18.15.13",
     "@types/sequelize": "^4.28.14",
-    "morgan": "^1.10.0",
-    "sequelize-cli": "^6.6.0",
     "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   }
