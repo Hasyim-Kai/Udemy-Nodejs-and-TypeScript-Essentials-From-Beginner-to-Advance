@@ -23,7 +23,7 @@ middlewares(app);
 //  Mongo DB Sync 
 // =====================
 
-connect('mongodb://localhost:27017/udemy__express_practice');
+connect('mongodb://localhost:27017/udemy_express_practice');
 
 // =====================
 //  Initialize & Use Routes
