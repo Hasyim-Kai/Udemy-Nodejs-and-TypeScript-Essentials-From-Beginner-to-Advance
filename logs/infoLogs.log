@@ -24,3 +24,6 @@
 {"level":"info","message":"::1 - - [25/May/2023:04:06:34 +0000] \"POST /api/auth/login HTTP/1.1\" 200 49 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - - [25/May/2023:04:06:54 +0000] \"POST /api/auth/login HTTP/1.1\" 200 49 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - - [25/May/2023:04:07:05 +0000] \"POST /api/auth/login HTTP/1.1\" 200 348 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [26/May/2023:11:58:33 +0000] \"GET /api/movie HTTP/1.1\" 200 370 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [26/May/2023:11:59:12 +0000] \"DELETE /api/movie/646ed58ee257b0d82562aa29 HTTP/1.1\" 201 151 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [26/May/2023:11:59:24 +0000] \"GET /api/movie HTTP/1.1\" 200 241 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\"\n"}

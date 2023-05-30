@@ -10,6 +10,7 @@ module.exports = (app: any) => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true, }));
   app.use(morgan('combined', { stream: infoLoggerStream }));
+  
   // app.use((req: Request, res: Response, next: NextFunction) => {
   //   console.log('from Global Middleware!');
   //   next();

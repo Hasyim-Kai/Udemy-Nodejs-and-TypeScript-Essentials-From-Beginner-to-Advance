@@ -3,6 +3,7 @@
 // ======================
 
 import { connect } from "mongoose";
+import { connectDB } from "./config/mongodb";
 
 require('dotenv').config();
 const express = require('express');
@@ -23,7 +24,7 @@ middlewares(app);
 //  Mongo DB Sync 
 // =====================
 
-connect('mongodb://localhost:27017/udemy_express_practice');
+connectDB();
 
 // =====================
 //  Initialize & Use Routes
