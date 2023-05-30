@@ -33,4 +33,27 @@ const add = async (req: Request, res: Response) => {
   }
 };
 
-export = { getAll, get, add }
+const update = async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const data = await Movie.updateOne({ id }, req.body).exec();
+    console.log(data.acknowledged)
+    return res.status(201).json({ status: true, data });
+  } catch (err) {
+    console.log(err)
+    res.status(500).json({ success: false, error: "Something went wrong", });
+  }
+};
+
+const del = async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const data = await Movie.findByIdAndDelete(id).exec();
+    return res.status(201).json({ status: true, data });
+  } catch (err) {
+    console.log(err)
+    res.status(500).json({ success: false, error: "Something went wrong", });
+  }
+};
+
+export = { getAll, get, add, update, del }
