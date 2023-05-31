@@ -1,6 +1,10 @@
 import { Schema, model } from "mongoose";
 
-const CommentSchema = new Schema({
+const CommentSchema = new Schema({ 
+  user_id: {
+    type: String,
+    required: true,
+  },
   name: {
     type: String,
     required: true,
@@ -9,10 +13,14 @@ const CommentSchema = new Schema({
     type: String,
     required: true,
   },
+  movie_id: {
+    type: String,
+    required: true,
+  },
   date: {
-    type: Boolean,
+    type: Date,
     required: false,
-    default: false,
+    default: new Date(),
   }
 });
 
