@@ -1,23 +1,19 @@
 import { Schema, model } from "mongoose";
 
-const UserSchema = new Schema({
+const CommentSchema = new Schema({
   name: {
     type: String,
     required: true,
   },
-  email: {
+  text: {
     type: String,
     required: true,
   },
-  password: {
-    type: String,
-    required: true,
-  },
-  verified: {
+  date: {
     type: Boolean,
     required: false,
     default: false,
-  },
+  }
 });
 
-export const User = model("User", UserSchema);
+export const Comment = model("Comment", CommentSchema);
