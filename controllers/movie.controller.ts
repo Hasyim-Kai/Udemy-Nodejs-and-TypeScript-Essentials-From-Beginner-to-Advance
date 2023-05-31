@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { Movie } from '../model/movie';
+import { Comment } from '../model/comment';
 
 const getAll = async (req: Request, res: Response) => {
   try {
@@ -26,7 +27,9 @@ const getAll = async (req: Request, res: Response) => {
 const get = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    const data = await Movie.findById(id).exec();
+    const movie: any = await Movie.findById(id).exec();
+    const latestComment = await Comment.find({ movie_id: id }).sort({ $natural: -1 }).limit(3).exec();
+    const data = { movie, latestComment }
     return res.status(201).json({ status: true, data });
   } catch (err) {
     console.log(err)
