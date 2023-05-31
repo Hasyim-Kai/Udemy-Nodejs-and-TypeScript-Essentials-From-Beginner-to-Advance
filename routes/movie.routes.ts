@@ -1,11 +1,12 @@
 const router = require("express").Router();
 import movie from "../controllers/movie.controller";
+import { authenticate } from "../middlewares/auth";
 
-router.get("/", movie.getAll)
-  .post("/", movie.add)
-  .get("/:id", movie.get)
-  .put("/:id", movie.update)
-  .delete("/:id", movie.del)
+router.get("/", authenticate, movie.getAll)
+  .post("/", authenticate, movie.add)
+  .get("/:id", authenticate, movie.get)
+  .put("/:id", authenticate, movie.update)
+  .delete("/:id", authenticate, movie.del)
 
 
 export = router;

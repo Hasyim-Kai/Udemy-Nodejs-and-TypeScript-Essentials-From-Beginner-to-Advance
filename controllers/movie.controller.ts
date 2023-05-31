@@ -3,6 +3,7 @@ import { Movie } from '../model/movie';
 
 const getAll = async (req: Request, res: Response) => {
   try {
+    // console.log(res.locals.user)
     const page = Number(req.query.page)
     const itemPerPage = Number(req.query.itemPerPage)
     if (!page || !itemPerPage) {
